@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Jeopardy</title>
+    <meta name="description" content="CAT Jeopardy">
+    <meta name="author" content="SitePoint">
+    <link rel="stylesheet" href="jeopardy.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One+SC|Bungee&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Intro to Game MODAL -->
+
+    <div id="intro">
+        <div id="light"></div>
+        <div id="light2"></div>
+        <div id="light3"></div>
+        <p id="intromessage1">THIS</p>
+        <p id="intromessage2">IS</p>
+        <br>
+        <section id="hostsection">
+            <section id="hosttext">
+                <div id="load">LOADING</div>
+            </section>
+        </section>
+
+    </div>
+
+
+    <!-- This is the Question Modal -->
+    <div class="modal">
+        <div class="popup">
+            <div id="question"></div>
+            <div id="answer" onclick="getAnswer()">
+                <p>ANSWER</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- This is the DAILY DOUBLE Modal -->
+    <div class="modal2">
+        <div class="popup2">
+            <div id='dd'>*** DAILY DOUBLE ***</div>
+            <div id="question2"></div>
+            <div id="answer2" onclick="getAnswer()">
+                <p>ANSWER</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Did You Get It Right MODAL? -->
+
+    <div id="correctOrNot">
+        <div id="yes" onclick="earnPoints()">
+            <p>CORRECT</p>
+        </div>
+        <div id="no" onclick="noPoints()">
+            <p>INCORRECT</p>
+        </div>
+    </div>
+
+    <!-- End of Game MODAL -->
+
+    <div id="end">
+        <p id="totalscore"></p>
+        <br>
+        <button id="playagain" onclick="window.location.reload()">Try To Beat Your Score</button>
+    </div>
+
+    <!-- Score -->
+    <div id="score">
+        <p>SCORE :</p>
+        <p id="calcScore">000</p>
+    </div>
+
+    <!-- Title of game -->
+    <div id="gametitle">JEOPARDY</div>
+
+    <!-- Game Grid -->
+    <div class="grid-container">
+
+        <!-- Categories -->
+        <div class="griditem">
+            <p class="category">SCIENCE</p>
+        </div>
+        <div class="griditem">
+            <p class="category">MATH</p>
+        </div>
+        <div class="griditem">
+            <p class="category">HISTORY</p>
+        </div>
+        <div class="griditem">
+            <p class="category">ART</p>
+        </div>
+        <div class="griditem">
+            <p class="category">SPORTS</p>
+        </div>
+        <div class="griditem">
+            <p class="category">ENTERTAINMENT</p>
+        </div>
+
+        <!-- $100 Questions -->
+
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$100</p>
+
+        </div>
+
+        <!-- $200 Questions       -->
+
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$200</p>
+
+        </div>
+
+        <!-- $300 Questions -->
+
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$300</p>
+
+        </div>
+
+        <!-- $400 Questions -->
+
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$400</p>
+
+        </div>
+
+        <!-- $500 Questions -->
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+        <div class="griditem pointer">
+
+
+            <p class='back'>$500</p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jeopardy.js"></script>
+
+</body>
+
+</html>
