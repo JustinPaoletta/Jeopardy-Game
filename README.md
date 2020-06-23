@@ -4,4 +4,8 @@ THE GAME MAINLY WORKS HOW JEOPARDY WORKS. THE MAIN DIFFERENCE IS THE DAILY DOUBL
 
 The game also relies on the honor system. Answer the question out loud, then view the answer. Next choose whether you were correct or incorrect and move on to the next question.
 
+### Preview
+
+![](Jeopardy.gif)
+
 This game was created as a training tool to be played by a trainee and controlled by the trainer. It is free to copy and insert any questions and answers you would like.
