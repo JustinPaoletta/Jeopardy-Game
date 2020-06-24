@@ -1,6 +1,6 @@
 # JEOPARDY 
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/github/license/JustinPaoletta/Jeopardy-Game.svg?style=for-the-badge)](https://github.com/JustinPaoletta/Jeopardy-Game)
 
 THE GAME MAINLY WORKS HOW JEOPARDY WORKS. THE MAIN DIFFERENCE IS THE DAILY DOUBLE JUST DOUBLES THE SCORE FOR THAT CURRENT QUESTION INSTEAD OF ALLOWING THE PLAYER TO BET. IF THEY PICK A QUESTION FOR $500 THEN THAT MEANS THEY WOULD EITHER GET $1000 OR LOSE $1000 DEPENDING ON IF THEY ANSWER CORRECTLY.
 
